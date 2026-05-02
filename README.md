@@ -1,6 +1,6 @@
 # NorthMart Retail Sales Pipeline
 
-A fictional Ontario retailer's finance team had no reliable way to attribute revenue shifts — YoY declines were blamed on "market conditions" with no data to back it up. This project builds the pipeline that changes that: raw POS transactions → validated staging → star schema → self-serve Power BI dashboard with an anomaly detection layer.
+A fictional Ontario retailer's finance team had no reliable way to attribute revenue shifts. YoY declines were blamed on "market conditions" with no data to back it up. This project builds the pipeline that changes that: raw POS transactions : validated staging : star schema : self-serve Power BI dashboard with an anomaly detection layer.
 
 Data is synthetic (590K transactions, 12 stores, 2023–2024) with realistic seasonality and deliberate business dynamics baked in — excess discounting in Electronics, a demand surge in Health & Wellness — so the analytical layer produces meaningful, non-trivial findings.
 
@@ -12,11 +12,11 @@ Data is synthetic (590K transactions, 12 stores, 2023–2024) with realistic sea
 
 ```
 CSV (daily POS export)
-  → ingest.py          schema validation, dedup, null handling
-  → transform.py       star schema: fact_sales + 4 dim tables
-  → SQL queries        revenue decomposition, store P&L, discount leakage, seasonality
-  → detect_anomalies.py  Isolation Forest on store-day aggregates → anomaly_watchlist table
-  → Power BI           DirectQuery on fact_sales + anomaly_watchlist, RLS by region
+  > ingest.py          schema validation, dedup, null handling
+  > transform.py       star schema: fact_sales + 4 dim tables
+  > SQL queries        revenue decomposition, store P&L, discount leakage, seasonality
+  > detect_anomalies.py  Isolation Forest on store-day aggregates → anomaly_watchlist table
+  > Power BI           DirectQuery on fact_sales + anomaly_watchlist, RLS by region
 ```
 
 The SQL layer is written in T-SQL (SQL Server). The repo runs on SQLite with no external dependencies — swap one engine string to point at a real server (see [Production notes](#production-notes)).
