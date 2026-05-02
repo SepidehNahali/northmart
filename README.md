@@ -1,8 +1,8 @@
 # NorthMart Retail Sales Pipeline
 
-A fictional Ontario retailer's finance team had no reliable way to attribute revenue shifts. YoY declines were blamed on "market conditions" with no data to back it up. This project builds the pipeline that changes that: raw POS transactions : validated staging : star schema : self-serve Power BI dashboard with an anomaly detection layer.
+A fictional Ontario retailer's finance team had no reliable way to attribute revenue shifts. YoY declines were blamed on "market conditions" with no data to back it up. This project builds the pipeline that changes that> raw POS transactions > validated staging > star schema >  self-serve Power BI dashboard with an anomaly detection layer.
 
-Data is synthetic (590K transactions, 12 stores, 2023–2024) with realistic seasonality and deliberate business dynamics baked in — excess discounting in Electronics, a demand surge in Health & Wellness — so the analytical layer produces meaningful, non-trivial findings.
+Data is synthetic (590K transactions, 12 stores, 2023–2024) with realistic seasonality and deliberate business dynamics baked in excess discounting in Electronics, a demand surge in Health & Wellness  so the analytical layer produces meaningful, non-trivial findings.
 
 **Stack:** Python · SQL Server / SQLite · T-SQL · Power BI · DAX · scikit-learn
 
