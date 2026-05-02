@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/27302892/README.md)
 # NorthMart Retail Sales Pipeline
 
 A fictional Ontario retailer's finance team had no reliable way to attribute revenue shifts — YoY declines were blamed on "market conditions" with no data to back it up. This project builds the pipeline that changes that: raw POS transactions → validated staging → star schema → self-serve Power BI dashboard with an anomaly detection layer.
